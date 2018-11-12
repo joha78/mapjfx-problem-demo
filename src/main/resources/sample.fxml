@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<?import com.panemu.tiwulfx.control.DetachableTabPane?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import com.panemu.tiwulfx.control.DetachableTabPane?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 
-
-<BorderPane   prefHeight="11401.0" prefWidth="17055.0"  xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<?import com.panemu.tiwulfx.control.DetachableTabPane?>
+<BorderPane prefHeight="11401.0" prefWidth="17055.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <center>
       <DetachableTabPane fx:id="tabPane" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER" />
    </center>

@@ -24,8 +24,6 @@ public class Controller {
 
     @FXML
     private void initialize() {
-        tabPane.setScope("scope1");
-        tabPane.setStageOwnerFactory(parentStage -> null);
         tabPane.setMaxSize(Double.MAX_VALUE, Double.MAX_VALUE);
         tabPane.setTabClosingPolicy(TabPane.TabClosingPolicy.ALL_TABS);
 
@@ -36,6 +34,10 @@ public class Controller {
                 tabPane.getSelectionModel().select(newTab);
             } else {
                 DetachableTab newTab = new DetachableTab("Map", buildMap());
+                newTab.setOnClosed(closeEvent -> {
+                    tabPane.getTabs().remove(newTab);
+                    newTab.setContent(null);
+                });
                 tabPane.getTabs().add(newTab);
                 tabPane.getSelectionModel().select(newTab);
             }
